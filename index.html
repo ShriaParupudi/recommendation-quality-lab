@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Independent dashboard evaluating shopping recommendation quality.">
+    <title>Recommendation Quality Lab</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="shell top">
+        <div class="brand">
+          <span>RQ</span>
+          <div>
+            <b>Recommendation Quality Lab</b>
+            <small>Independent recommendation evaluation by Shria</small>
+          </div>
+        </div>
+        <span class="pill sample">Sample data</span>
+      </div>
+    </header>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Recommendation evaluation dashboard</p>
+          <h1>Quality, from request<br>to ready-to-buy.</h1>
+          <p class="lede">A transparent snapshot of how shopping recommendations perform across relevance, constraints, explanation, purchase readiness, and variety.</p>
+        </div>
+        <aside>
+          <label>Category<select id="category">
+          </select>
+        </label>
+        <label>Difficulty<select id="difficulty">
+          <option>All difficulties</option>
+          <option>Simple</option>
+          <option>Moderate</option>
+          <option>Highly constrained</option>
+        </select>
+      </label>
+      <button id="reset">↻ Reset filters</button>
+    </aside>
+  </section>
+  <div class="warning">
+    <b>△ Demonstration dashboard.</b> All outcomes are synthetic sample data created solely to demonstrate the evaluation framework.</div>
+    <section id="metrics" class="metrics">
+    </section>
+    <div id="sample-note" class="sample-note">
+    </div>
+    <section class="charts">
+      <article class="card">
+        <h2>Average score by category</h2>
+        <p>Weighted composite · 0–100</p>
+        <div id="category-chart" class="bars">
+        </div>
+      </article>
+      <article class="card">
+        <h2>Performance by difficulty</h2>
+        <p>Weighted composite · 0–100</p>
+        <div id="difficulty-chart" class="bars">
+        </div>
+      </article>
+    </section>
+    <section class="lower">
+      <article class="card">
+        <h2>Criterion health</h2>
+        <p>Mean rating · 0–5</p>
+        <div id="criteria">
+        </div>
+      </article>
+      <article class="card">
+        <h2>Common failure types</h2>
+        <p>Tagged scenario count</p>
+        <ol id="failures">
+        </ol>
+      </article>
+    </section>
+    <section class="method">
+      <div>
+        <p class="eyebrow">Transparent methodology</p>
+        <h2>Hard constraints matter most.</h2>
+        <p>Each criterion is scored 0–5. Constraints receive 30%, relevance 25%, purchase readiness 20%, explanation 15%, and variety 10%.</p>
+      </div>
+      <code>20 × (0.25R + 0.30C + 0.15E + 0.20P + 0.10V)</code>
+    </section>
+    <section class="source">
+      <div>
+        <span class="pill">Fictional retail benchmark</span>
+        <p>A fictional e-commerce recommendation product spanning home goods, everyday essentials, personal care, technology, fitness, footwear, and apparel.</p>
+      </div>
+      <span class="pill">No company affiliation</span>
+    </section>
+  </main>
+  <footer>Independent portfolio project by Shria — based on synthetic sample data.</footer>
+  <script src="app.js">
+  </script>
+</body>
+</html>
